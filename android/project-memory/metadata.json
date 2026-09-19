@@ -1,0 +1,6 @@
+{
+  "name": "Project Memory",
+  "description": "Production-oriented local-first external-memory provider for AI coding assistants via MCP",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,3 @@
+# Phase 5 Brief
+
+Implement Phase 5 from MCP_SPEC.md and SECURITY.md. Replace proof handlers with production adapters while retaining the official SDK and Ktor. Add all contracted tools, resources, prompts, schemas, pagination, stable errors, authentication, scopes, idempotency, approvals, rate/output/time limits, redacted logs, foreground service, loopback default, explicit LAN mode, token rotation, configuration display, and status. Handlers call shared use cases and policies, never DAOs. Expose no SQL, shell, arbitrary paths, or arbitrary URLs. Add protocol, Inspector, and three-client tests. Verify Stop closes the listener. Build, test, report, and stop.

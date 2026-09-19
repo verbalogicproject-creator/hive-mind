@@ -1,0 +1,148 @@
+[
+  {
+    "name": "queue_body_leak",
+    "record": {
+      "schemaVersion": "0.1.0",
+      "kind": "handoff_metadata",
+      "id": "handoff-a",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "recipientLaneId": "claude",
+      "senderClientId": "client-codex",
+      "title": "Index continuation",
+      "createdAt": "2026-09-18T20:00:00Z",
+      "status": "unreviewed",
+      "estimatedChars": 900,
+      "summary": "Private body"
+    }
+  },
+  {
+    "name": "agent_activates_note",
+    "record": {
+      "schemaVersion": "0.1.0",
+      "kind": "inbox",
+      "id": "note-a",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "laneId": "codex",
+      "origin": {
+        "clientId": "client-codex",
+        "providerId": "codex",
+        "modelLabel": null,
+        "modelIdentityTrust": "unknown",
+        "sessionId": "session-a"
+      },
+      "status": "active",
+      "recordType": "note",
+      "content": "Investigate index restart."
+    }
+  },
+  {
+    "name": "agent_approves_proposal",
+    "record": {
+      "schemaVersion": "0.1.0",
+      "kind": "promotion_proposal",
+      "id": "proposal-a",
+      "projectId": "project-a",
+      "sessionId": "session-a",
+      "idempotencyKey": "request-a",
+      "revision": 1,
+      "status": "approved",
+      "items": [
+        {
+          "id": "item-a",
+          "sources": [
+            {
+              "recordId": "source-a",
+              "versionId": "v1"
+            }
+          ],
+          "destination": {
+            "visibility": "project_shared",
+            "laneId": null
+          },
+          "recordType": "decision",
+          "content": "Incomplete scans do not tombstone sources.",
+          "rationale": "Avoid data loss during interrupted scans."
+        }
+      ]
+    }
+  },
+  {
+    "name": "queue_negative_size",
+    "record": {
+      "schemaVersion": "0.1.0",
+      "kind": "handoff_metadata",
+      "id": "handoff-a",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "recipientLaneId": "claude",
+      "senderClientId": "client-codex",
+      "title": "Index continuation",
+      "createdAt": "2026-09-18T20:00:00Z",
+      "status": "unreviewed",
+      "estimatedChars": -1
+    }
+  },
+  {
+    "name": "invented_model_verification",
+    "record": {
+      "schemaVersion": "0.1.0",
+      "kind": "inbox",
+      "id": "note-a",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "laneId": "codex",
+      "origin": {
+        "clientId": "client-codex",
+        "providerId": "codex",
+        "modelLabel": null,
+        "modelIdentityTrust": "verified",
+        "sessionId": "session-a"
+      },
+      "status": "unreviewed",
+      "recordType": "note",
+      "content": "Investigate index restart."
+    }
+  },
+  {
+    "name": "unknown_field",
+    "record": {
+      "schemaVersion": "0.1.0",
+      "kind": "handoff",
+      "id": "handoff-a",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "sourceLaneId": "codex",
+      "recipientLaneId": "claude",
+      "origin": {
+        "clientId": "client-codex",
+        "providerId": "codex",
+        "modelLabel": null,
+        "modelIdentityTrust": "unknown",
+        "sessionId": "session-a"
+      },
+      "status": "unreviewed",
+      "title": "Index continuation",
+      "summary": "Restart behavior needs verification.",
+      "nextActions": [
+        "Test interrupted scan"
+      ],
+      "blockers": [],
+      "evidence": [
+        {
+          "recordId": "source-a",
+          "versionId": "v1"
+        }
+      ],
+      "verification": [
+        {
+          "claim": "Unit suite passed",
+          "state": "reported",
+          "evidence": []
+        }
+      ],
+      "grantApprovedByAgent": true
+    }
+  }
+]

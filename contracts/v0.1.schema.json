@@ -1,0 +1,480 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project Memory v0.1 exchange records",
+  "description": "Shape validation only. Authentication, object authorization, evidence truth, references, and budgets require application checks.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/inbox"
+    },
+    {
+      "$ref": "#/$defs/handoffMetadata"
+    },
+    {
+      "$ref": "#/$defs/handoff"
+    },
+    {
+      "$ref": "#/$defs/promotion"
+    },
+    {
+      "$ref": "#/$defs/context"
+    }
+  ],
+  "$defs": {
+    "origin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "providerId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "modelLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "modelIdentityTrust": {
+          "enum": [
+            "reported",
+            "unknown"
+          ]
+        },
+        "sessionId": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "clientId",
+        "providerId",
+        "modelLabel",
+        "modelIdentityTrust",
+        "sessionId"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recordId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "versionId": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "recordId",
+        "versionId"
+      ]
+    },
+    "inbox": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "const": "0.1.0"
+        },
+        "kind": {
+          "const": "inbox"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "versionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "laneId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "$ref": "#/$defs/origin"
+        },
+        "status": {
+          "const": "unreviewed"
+        },
+        "recordType": {
+          "enum": [
+            "note",
+            "checkpoint",
+            "plan"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "id",
+        "versionId",
+        "projectId",
+        "laneId",
+        "origin",
+        "status",
+        "recordType",
+        "content"
+      ]
+    },
+    "handoffMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "const": "0.1.0"
+        },
+        "kind": {
+          "const": "handoff_metadata"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "versionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recipientLaneId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "senderClientId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "const": "unreviewed"
+        },
+        "estimatedChars": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "id",
+        "versionId",
+        "projectId",
+        "recipientLaneId",
+        "senderClientId",
+        "title",
+        "createdAt",
+        "status",
+        "estimatedChars"
+      ]
+    },
+    "handoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "const": "0.1.0"
+        },
+        "kind": {
+          "const": "handoff"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "versionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceLaneId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recipientLaneId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "$ref": "#/$defs/origin"
+        },
+        "status": {
+          "const": "unreviewed"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nextActions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1
+        },
+        "verification": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "claim": {
+                "type": "string",
+                "minLength": 1
+              },
+              "state": {
+                "enum": [
+                  "reported",
+                  "evidence_attached",
+                  "independently_verified"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/source"
+                }
+              }
+            },
+            "required": [
+              "claim",
+              "state",
+              "evidence"
+            ]
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "id",
+        "versionId",
+        "projectId",
+        "sourceLaneId",
+        "recipientLaneId",
+        "origin",
+        "status",
+        "title",
+        "summary",
+        "nextActions",
+        "blockers",
+        "evidence",
+        "verification"
+      ]
+    },
+    "promotion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "const": "0.1.0"
+        },
+        "kind": {
+          "const": "promotion_proposal"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sessionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "const": "proposed"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sources": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/source"
+                },
+                "minItems": 1
+              },
+              "destination": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "visibility": {
+                    "enum": [
+                      "project_shared",
+                      "private_lane"
+                    ]
+                  },
+                  "laneId": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "visibility",
+                  "laneId"
+                ]
+              },
+              "recordType": {
+                "enum": [
+                  "fact",
+                  "decision",
+                  "summary",
+                  "prompt"
+                ]
+              },
+              "content": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "sources",
+              "destination",
+              "recordType",
+              "content",
+              "rationale"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "id",
+        "projectId",
+        "sessionId",
+        "idempotencyKey",
+        "revision",
+        "status",
+        "items"
+      ]
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "const": "0.1.0"
+        },
+        "kind": {
+          "const": "context"
+        },
+        "projectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sessionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshotAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "omittedItems": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "projectId",
+        "sessionId",
+        "content",
+        "snapshotAt",
+        "citations",
+        "warnings",
+        "omittedItems"
+      ]
+    }
+  }
+}

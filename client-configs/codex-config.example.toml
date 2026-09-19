@@ -1,0 +1,4 @@
+# Verify auth fields against installed Codex.
+[mcp_servers.project-memory]
+url = "http://PHONE_OR_HOST:PORT/mcp"
+bearer_token_env_var = "MEMORY_TOKEN"

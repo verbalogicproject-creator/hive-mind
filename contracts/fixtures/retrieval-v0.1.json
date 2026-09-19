@@ -1,0 +1,1427 @@
+{
+  "description": "Synthetic acceptance corpus. Expected sets constrain eligibility; ranks are not asserted. Empty handoff cases require APPROVAL_REQUIRED with no body. Not measured Android results.",
+  "records": [
+    {
+      "id": "scan-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "scan",
+      "body": "Incomplete scans never tombstone missing files."
+    },
+    {
+      "id": "scan-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "scan",
+      "body": "Historical rule, no longer current: Incomplete scans never tombstone missing files."
+    },
+    {
+      "id": "scan-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "scan",
+      "body": "Incomplete scans never tombstone missing files."
+    },
+    {
+      "id": "scan-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "scan",
+      "body": "Incomplete scans never tombstone missing files.",
+      "laneId": "claude"
+    },
+    {
+      "id": "scan-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "scan",
+      "body": "Incomplete scans never tombstone missing files.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "handoff-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "handoff",
+      "body": "Owner selection grants access to one immutable handoff version."
+    },
+    {
+      "id": "handoff-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "handoff",
+      "body": "Historical rule, no longer current: Owner selection grants access to one immutable handoff version."
+    },
+    {
+      "id": "handoff-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "handoff",
+      "body": "Owner selection grants access to one immutable handoff version."
+    },
+    {
+      "id": "handoff-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "handoff",
+      "body": "Owner selection grants access to one immutable handoff version.",
+      "laneId": "claude"
+    },
+    {
+      "id": "handoff-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "handoff",
+      "body": "Owner selection grants access to one immutable handoff version.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "promotion-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "promotion",
+      "body": "The owner approves individual proposed promotion items."
+    },
+    {
+      "id": "promotion-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "promotion",
+      "body": "Historical rule, no longer current: The owner approves individual proposed promotion items."
+    },
+    {
+      "id": "promotion-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "promotion",
+      "body": "The owner approves individual proposed promotion items."
+    },
+    {
+      "id": "promotion-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "promotion",
+      "body": "The owner approves individual proposed promotion items.",
+      "laneId": "claude"
+    },
+    {
+      "id": "promotion-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "promotion",
+      "body": "The owner approves individual proposed promotion items.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "restart-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "restart",
+      "body": "Session inbox records persist across process restart."
+    },
+    {
+      "id": "restart-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "restart",
+      "body": "Historical rule, no longer current: Session inbox records persist across process restart."
+    },
+    {
+      "id": "restart-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "restart",
+      "body": "Session inbox records persist across process restart."
+    },
+    {
+      "id": "restart-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "restart",
+      "body": "Session inbox records persist across process restart.",
+      "laneId": "claude"
+    },
+    {
+      "id": "restart-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "restart",
+      "body": "Session inbox records persist across process restart.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "origin-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "origin",
+      "body": "Origin attribution survives sharing and promotion."
+    },
+    {
+      "id": "origin-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "origin",
+      "body": "Historical rule, no longer current: Origin attribution survives sharing and promotion."
+    },
+    {
+      "id": "origin-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "origin",
+      "body": "Origin attribution survives sharing and promotion."
+    },
+    {
+      "id": "origin-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "origin",
+      "body": "Origin attribution survives sharing and promotion.",
+      "laneId": "claude"
+    },
+    {
+      "id": "origin-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "origin",
+      "body": "Origin attribution survives sharing and promotion.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "revoke-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "revoke",
+      "body": "New requests from revoked clients fail authorization."
+    },
+    {
+      "id": "revoke-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "revoke",
+      "body": "Historical rule, no longer current: New requests from revoked clients fail authorization."
+    },
+    {
+      "id": "revoke-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "revoke",
+      "body": "New requests from revoked clients fail authorization."
+    },
+    {
+      "id": "revoke-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "revoke",
+      "body": "New requests from revoked clients fail authorization.",
+      "laneId": "claude"
+    },
+    {
+      "id": "revoke-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "revoke",
+      "body": "New requests from revoked clients fail authorization.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "budget-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "budget",
+      "body": "Context includes framing and citations inside its character budget."
+    },
+    {
+      "id": "budget-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "budget",
+      "body": "Historical rule, no longer current: Context includes framing and citations inside its character budget."
+    },
+    {
+      "id": "budget-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "budget",
+      "body": "Context includes framing and citations inside its character budget."
+    },
+    {
+      "id": "budget-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "budget",
+      "body": "Context includes framing and citations inside its character budget.",
+      "laneId": "claude"
+    },
+    {
+      "id": "budget-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "budget",
+      "body": "Context includes framing and citations inside its character budget.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "parser-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "parser",
+      "body": "Every derived chunk records its parser identifier and version."
+    },
+    {
+      "id": "parser-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "parser",
+      "body": "Historical rule, no longer current: Every derived chunk records its parser identifier and version."
+    },
+    {
+      "id": "parser-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "parser",
+      "body": "Every derived chunk records its parser identifier and version."
+    },
+    {
+      "id": "parser-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "parser",
+      "body": "Every derived chunk records its parser identifier and version.",
+      "laneId": "claude"
+    },
+    {
+      "id": "parser-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "parser",
+      "body": "Every derived chunk records its parser identifier and version.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "backup-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "backup",
+      "body": "Exports omit credentials and live handoff grants."
+    },
+    {
+      "id": "backup-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "backup",
+      "body": "Historical rule, no longer current: Exports omit credentials and live handoff grants."
+    },
+    {
+      "id": "backup-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "backup",
+      "body": "Exports omit credentials and live handoff grants."
+    },
+    {
+      "id": "backup-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "backup",
+      "body": "Exports omit credentials and live handoff grants.",
+      "laneId": "claude"
+    },
+    {
+      "id": "backup-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "backup",
+      "body": "Exports omit credentials and live handoff grants.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    },
+    {
+      "id": "fts-current",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "fts",
+      "body": "Lexical retrieval works offline without embeddings."
+    },
+    {
+      "id": "fts-old",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "project_shared",
+      "status": "superseded",
+      "topic": "fts",
+      "body": "Historical rule, no longer current: Lexical retrieval works offline without embeddings."
+    },
+    {
+      "id": "fts-other",
+      "versionId": "v1",
+      "projectId": "project-b",
+      "visibility": "project_shared",
+      "status": "active",
+      "topic": "fts",
+      "body": "Lexical retrieval works offline without embeddings."
+    },
+    {
+      "id": "fts-private",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "private_lane",
+      "status": "active",
+      "topic": "fts",
+      "body": "Lexical retrieval works offline without embeddings.",
+      "laneId": "claude"
+    },
+    {
+      "id": "fts-handoff",
+      "versionId": "v1",
+      "projectId": "project-a",
+      "visibility": "handoff",
+      "status": "unreviewed",
+      "topic": "fts",
+      "body": "Lexical retrieval works offline without embeddings.",
+      "laneId": "claude",
+      "handoffVersionId": "h-v1"
+    }
+  ],
+  "cases": [
+    {
+      "id": "scan-natural",
+      "query": "What happens after an interrupted folder scan?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "scan-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "scan-old",
+        "scan-other",
+        "scan-private",
+        "scan-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "scan-exact",
+      "query": "scan-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "scan-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "scan-old",
+        "scan-other",
+        "scan-private",
+        "scan-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "scan-private",
+      "query": "What happens after an interrupted folder scan?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "scan-current",
+        "scan-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "scan-old",
+        "scan-other",
+        "scan-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "scan-handoff_unapproved",
+      "query": "Find the handoff about scan",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "scan-current",
+        "scan-old",
+        "scan-other",
+        "scan-private",
+        "scan-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "scan-handoff_approved",
+      "query": "Read selected handoff about scan",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "scan-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "scan-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "scan-current",
+        "scan-old",
+        "scan-other",
+        "scan-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "handoff-natural",
+      "query": "When can Claude read a handoff?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "handoff-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "handoff-old",
+        "handoff-other",
+        "handoff-private",
+        "handoff-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "handoff-exact",
+      "query": "handoff-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "handoff-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "handoff-old",
+        "handoff-other",
+        "handoff-private",
+        "handoff-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "handoff-private",
+      "query": "When can Claude read a handoff?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "handoff-current",
+        "handoff-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "handoff-old",
+        "handoff-other",
+        "handoff-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "handoff-handoff_unapproved",
+      "query": "Find the handoff about handoff",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "handoff-current",
+        "handoff-old",
+        "handoff-other",
+        "handoff-private",
+        "handoff-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "handoff-handoff_approved",
+      "query": "Read selected handoff about handoff",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "handoff-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "handoff-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "handoff-current",
+        "handoff-old",
+        "handoff-other",
+        "handoff-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "promotion-natural",
+      "query": "Who approves lasting memories?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "promotion-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "promotion-old",
+        "promotion-other",
+        "promotion-private",
+        "promotion-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "promotion-exact",
+      "query": "promotion-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "promotion-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "promotion-old",
+        "promotion-other",
+        "promotion-private",
+        "promotion-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "promotion-private",
+      "query": "Who approves lasting memories?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "promotion-current",
+        "promotion-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "promotion-old",
+        "promotion-other",
+        "promotion-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "promotion-handoff_unapproved",
+      "query": "Find the handoff about promotion",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "promotion-current",
+        "promotion-old",
+        "promotion-other",
+        "promotion-private",
+        "promotion-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "promotion-handoff_approved",
+      "query": "Read selected handoff about promotion",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "promotion-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "promotion-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "promotion-current",
+        "promotion-old",
+        "promotion-other",
+        "promotion-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "restart-natural",
+      "query": "Does session memory survive restart?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "restart-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "restart-old",
+        "restart-other",
+        "restart-private",
+        "restart-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "restart-exact",
+      "query": "restart-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "restart-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "restart-old",
+        "restart-other",
+        "restart-private",
+        "restart-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "restart-private",
+      "query": "Does session memory survive restart?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "restart-current",
+        "restart-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "restart-old",
+        "restart-other",
+        "restart-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "restart-handoff_unapproved",
+      "query": "Find the handoff about restart",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "restart-current",
+        "restart-old",
+        "restart-other",
+        "restart-private",
+        "restart-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "restart-handoff_approved",
+      "query": "Read selected handoff about restart",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "restart-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "restart-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "restart-current",
+        "restart-old",
+        "restart-other",
+        "restart-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "origin-natural",
+      "query": "Does sharing change memory authorship?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "origin-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "origin-old",
+        "origin-other",
+        "origin-private",
+        "origin-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "origin-exact",
+      "query": "origin-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "origin-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "origin-old",
+        "origin-other",
+        "origin-private",
+        "origin-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "origin-private",
+      "query": "Does sharing change memory authorship?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "origin-current",
+        "origin-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "origin-old",
+        "origin-other",
+        "origin-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "origin-handoff_unapproved",
+      "query": "Find the handoff about origin",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "origin-current",
+        "origin-old",
+        "origin-other",
+        "origin-private",
+        "origin-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "origin-handoff_approved",
+      "query": "Read selected handoff about origin",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "origin-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "origin-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "origin-current",
+        "origin-old",
+        "origin-other",
+        "origin-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "revoke-natural",
+      "query": "What happens when a client is revoked?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "revoke-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "revoke-old",
+        "revoke-other",
+        "revoke-private",
+        "revoke-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "revoke-exact",
+      "query": "revoke-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "revoke-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "revoke-old",
+        "revoke-other",
+        "revoke-private",
+        "revoke-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "revoke-private",
+      "query": "What happens when a client is revoked?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "revoke-current",
+        "revoke-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "revoke-old",
+        "revoke-other",
+        "revoke-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "revoke-handoff_unapproved",
+      "query": "Find the handoff about revoke",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "revoke-current",
+        "revoke-old",
+        "revoke-other",
+        "revoke-private",
+        "revoke-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "revoke-handoff_approved",
+      "query": "Read selected handoff about revoke",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "revoke-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "revoke-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "revoke-current",
+        "revoke-old",
+        "revoke-other",
+        "revoke-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "budget-natural",
+      "query": "How is context size bounded?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "budget-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "budget-old",
+        "budget-other",
+        "budget-private",
+        "budget-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "budget-exact",
+      "query": "budget-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "budget-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "budget-old",
+        "budget-other",
+        "budget-private",
+        "budget-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "budget-private",
+      "query": "How is context size bounded?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "budget-current",
+        "budget-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "budget-old",
+        "budget-other",
+        "budget-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "budget-handoff_unapproved",
+      "query": "Find the handoff about budget",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "budget-current",
+        "budget-old",
+        "budget-other",
+        "budget-private",
+        "budget-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "budget-handoff_approved",
+      "query": "Read selected handoff about budget",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "budget-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "budget-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "budget-current",
+        "budget-old",
+        "budget-other",
+        "budget-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "parser-natural",
+      "query": "Which parser produced a chunk?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "parser-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "parser-old",
+        "parser-other",
+        "parser-private",
+        "parser-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "parser-exact",
+      "query": "parser-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "parser-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "parser-old",
+        "parser-other",
+        "parser-private",
+        "parser-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "parser-private",
+      "query": "Which parser produced a chunk?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "parser-current",
+        "parser-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "parser-old",
+        "parser-other",
+        "parser-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "parser-handoff_unapproved",
+      "query": "Find the handoff about parser",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "parser-current",
+        "parser-old",
+        "parser-other",
+        "parser-private",
+        "parser-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "parser-handoff_approved",
+      "query": "Read selected handoff about parser",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "parser-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "parser-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "parser-current",
+        "parser-old",
+        "parser-other",
+        "parser-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "backup-natural",
+      "query": "Are client tokens included in exports?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "backup-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "backup-old",
+        "backup-other",
+        "backup-private",
+        "backup-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "backup-exact",
+      "query": "backup-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "backup-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "backup-old",
+        "backup-other",
+        "backup-private",
+        "backup-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "backup-private",
+      "query": "Are client tokens included in exports?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "backup-current",
+        "backup-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "backup-old",
+        "backup-other",
+        "backup-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "backup-handoff_unapproved",
+      "query": "Find the handoff about backup",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "backup-current",
+        "backup-old",
+        "backup-other",
+        "backup-private",
+        "backup-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "backup-handoff_approved",
+      "query": "Read selected handoff about backup",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "backup-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "backup-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "backup-current",
+        "backup-old",
+        "backup-other",
+        "backup-private"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "fts-natural",
+      "query": "Does search require embeddings?",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "fts-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "fts-old",
+        "fts-other",
+        "fts-private",
+        "fts-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "fts-exact",
+      "query": "fts-current",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "fts-current"
+      ],
+      "forbiddenEvidenceIds": [
+        "fts-old",
+        "fts-other",
+        "fts-private",
+        "fts-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "fts-private",
+      "query": "Does search require embeddings?",
+      "projectId": "project-a",
+      "laneGrants": [
+        "claude"
+      ],
+      "handoffGrant": null,
+      "intent": "search",
+      "expectedEvidenceIds": [
+        "fts-current",
+        "fts-private"
+      ],
+      "forbiddenEvidenceIds": [
+        "fts-old",
+        "fts-other",
+        "fts-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "fts-handoff_unapproved",
+      "query": "Find the handoff about fts",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": null,
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [],
+      "forbiddenEvidenceIds": [
+        "fts-current",
+        "fts-old",
+        "fts-other",
+        "fts-private",
+        "fts-handoff"
+      ],
+      "assertRankOrder": false
+    },
+    {
+      "id": "fts-handoff_approved",
+      "query": "Read selected handoff about fts",
+      "projectId": "project-a",
+      "laneGrants": [],
+      "handoffGrant": {
+        "recordId": "fts-handoff",
+        "versionId": "h-v1"
+      },
+      "intent": "handoff_read",
+      "expectedEvidenceIds": [
+        "fts-handoff"
+      ],
+      "forbiddenEvidenceIds": [
+        "fts-current",
+        "fts-old",
+        "fts-other",
+        "fts-private"
+      ],
+      "assertRankOrder": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "gate": "v0.2.0-alpha.1 plan lock",
+  "planId": "project-memory-v0.2-alpha1-stability-agents-graph",
+  "planVersion": "1.0.0",
+  "approvalStatus": "approved",
+  "sourcePath": "plans/V0_2_STABILITY_UX_GRAPH.md",
+  "sourceSizeBytes": 7956,
+  "sourceSha256": "e0370951d76f1b487818dd08e7a0417be4191bdcff36fee9c106de9cca07d73e",
+  "bundledAssetPath": "app/src/main/assets/plans/V0_2_STABILITY_UX_GRAPH.md",
+  "projectId": "proj-76346aa4",
+  "laneId": "8c139cfc-a643-4ddd-a77a-66f9fca17e0e",
+  "sessionId": "4603e1b9-e2c4-46fe-bef4-df3b07c55fba",
+  "itemId": "project-memory-v0.2-alpha1-stability-agents-graph",
+  "idempotencyKey": "plan-lock-v0.2-alpha1-stability-agents-graph",
+  "ingestionStatus": "scheduled_on_first_app_start",
+  "runtimeReceiptPath": "files/receipts/V0_2_STABILITY_UX_GRAPH.receipt.json",
+  "restartVerification": "pending_physical_device",
+  "verificationNote": "The first app start appends the immutable plan idempotently; the next process start verifies the exact stored version and updates the private runtime receipt. No Android device was attached during the repository build."
+}

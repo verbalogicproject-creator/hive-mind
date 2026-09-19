@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProjectHandoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["projectId", "sessionId", "title", "summary", "completed", "currentState", "nextActions", "blockers", "files", "verification"],
+  "properties": {
+    "projectId": {"type": "string"},
+    "sessionId": {"type": "string"},
+    "title": {"type": "string", "minLength": 1},
+    "summary": {"type": "string"},
+    "completed": {"type": "array", "items": {"type": "string"}},
+    "currentState": {"type": "array", "items": {"type": "string"}},
+    "nextActions": {"type": "array", "items": {"type": "string"}},
+    "blockers": {"type": "array", "items": {"type": "string"}},
+    "decisions": {"type": "array", "items": {"type": "string"}},
+    "files": {"type": "array", "items": {"type": "string"}},
+    "verification": {"type": "array", "items": {"type": "string"}},
+    "evidenceUris": {"type": "array", "items": {"type": "string", "pattern": "^memory://"}}
+  }
+}

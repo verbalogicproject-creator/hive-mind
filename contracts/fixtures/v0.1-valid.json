@@ -1,0 +1,113 @@
+[
+  {
+    "schemaVersion": "0.1.0",
+    "kind": "inbox",
+    "id": "note-a",
+    "versionId": "v1",
+    "projectId": "project-a",
+    "laneId": "codex",
+    "origin": {
+      "clientId": "client-codex",
+      "providerId": "codex",
+      "modelLabel": null,
+      "modelIdentityTrust": "unknown",
+      "sessionId": "session-a"
+    },
+    "status": "unreviewed",
+    "recordType": "note",
+    "content": "Investigate index restart."
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "kind": "handoff_metadata",
+    "id": "handoff-a",
+    "versionId": "v1",
+    "projectId": "project-a",
+    "recipientLaneId": "claude",
+    "senderClientId": "client-codex",
+    "title": "Index continuation",
+    "createdAt": "2026-09-18T20:00:00Z",
+    "status": "unreviewed",
+    "estimatedChars": 900
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "kind": "handoff",
+    "id": "handoff-a",
+    "versionId": "v1",
+    "projectId": "project-a",
+    "sourceLaneId": "codex",
+    "recipientLaneId": "claude",
+    "origin": {
+      "clientId": "client-codex",
+      "providerId": "codex",
+      "modelLabel": null,
+      "modelIdentityTrust": "unknown",
+      "sessionId": "session-a"
+    },
+    "status": "unreviewed",
+    "title": "Index continuation",
+    "summary": "Restart behavior needs verification.",
+    "nextActions": [
+      "Test interrupted scan"
+    ],
+    "blockers": [],
+    "evidence": [
+      {
+        "recordId": "source-a",
+        "versionId": "v1"
+      }
+    ],
+    "verification": [
+      {
+        "claim": "Unit suite passed",
+        "state": "reported",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "kind": "promotion_proposal",
+    "id": "proposal-a",
+    "projectId": "project-a",
+    "sessionId": "session-a",
+    "idempotencyKey": "request-a",
+    "revision": 1,
+    "status": "proposed",
+    "items": [
+      {
+        "id": "item-a",
+        "sources": [
+          {
+            "recordId": "source-a",
+            "versionId": "v1"
+          }
+        ],
+        "destination": {
+          "visibility": "project_shared",
+          "laneId": null
+        },
+        "recordType": "decision",
+        "content": "Incomplete scans do not tombstone sources.",
+        "rationale": "Avoid data loss during interrupted scans."
+      }
+    ]
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "kind": "context",
+    "projectId": "project-a",
+    "sessionId": "session-a",
+    "content": "Scan restart is pending.",
+    "snapshotAt": "2026-09-18T20:00:00Z",
+    "citations": [
+      {
+        "recordId": "source-a",
+        "versionId": "v1"
+      }
+    ],
+    "warnings": [],
+    "omittedItems": 2
+  }
+]
